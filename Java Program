@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.Scanner;
+interface Shape 
+    final static double pi=3.142;    
+     public void area(float r);
+}
+ class Circle implements Shape
+     float  rad;
+     float area_circle;
+     public void area(float r)
+     {
+       rad=r;
+       area_circle=(float)pi*rad*rad;
+       System.out.println("Area is "+area_circle);
+     }
+public static void main(String args[])
+throws IOException
+{
+  Circle c=new Circle();
+  float radius;
+  Scanner s=new Scanner(System.in);
+  System.out.println("Enter the radius");
+  radius=s.nextInt();
+  c.area(radius);
+}
+}
